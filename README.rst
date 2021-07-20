@@ -3,7 +3,7 @@ FISSA Suite2p Example
 In the notebook we provide an example workflow to combine the `FISSA <fissa_>`_ and `Suite2p <suite2p_>`_ methods.
 
 This repository mainly functions to provide environment files to run this notebook on `Binder <Binder_>`_.
-For the most up-to-date code see the original `FISSA <fissa_>`_ repository.
+For the most up-to-date code and extensive documention see the original `FISSA <fissa_>`_ repository.
 
 You can `view <suitehtml_>`_ the notebook or directly interact with it on `Binder <suitebind_>`_. The notebook can also be separately `downloaded <suitedown_>`_.
 
