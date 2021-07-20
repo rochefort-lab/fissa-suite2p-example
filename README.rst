@@ -2,19 +2,18 @@ FISSA Suite2p Example
 =====================
 In the notebook we provide an example workflow to combine the `FISSA <fissa_>`_ and `Suite2p <suite2p_>`_ methods.
 
-This repository mainly functions to provide environment files to run this notebook on `Binder <Binder_>`_.
+This repository mainly functions to provide environment files to run this notebook on Binder.
 For the most up-to-date code and extensive documention see the original `FISSA <fissa_>`_ repository.
 
 You can `view <suitehtml_>`_ the notebook or directly interact with it on `Binder <suitebind_>`_. The notebook can also be separately `downloaded <suitedown_>`_.
 
 Note that launching the Binder can take quite a while as the install requirements are quite extensive.
 
-.. _Binder: https://mybinder.org/v2/gh/rochefort-lab/fissa/master?filepath=examples
 
 .. _fissa: https://github.com/rochefort-lab/fissa
 
 .. _suite2p: https://suite2p.readthedocs.io/
-.. _suitebind: https://mybinder.org/v2/gh/rochefort-lab/fissa-suite2p-example/master?filepath=Suite2p%20example.ipynb
+.. _suitebind: https://mybinder.org/v2/gh/rochefort-lab/fissa-suite2p-example/HEAD?filepath=Suite2p%2520example.ipynb
 .. _suitehtml: https://rochefort-lab.github.io/fissa/examples/Suite2p%20example.html
 .. _suiteview: https://github.com/rochefort-lab/fissa/blob/master/examples/Suite2p%20example.ipynb
 .. _suitedown: https://raw.githubusercontent.com/rochefort-lab/fissa/master/examples/Suite2p%20example.ipynb
