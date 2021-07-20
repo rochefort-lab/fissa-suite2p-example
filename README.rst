@@ -7,6 +7,7 @@ For the most up-to-date code and extensive documention see the original `FISSA <
 
 You can `view <suitehtml_>`_ the notebook or directly interact with it on `Binder <suitebind_>`_. The notebook can also be separately `downloaded <suitedown_>`_.
 
+Note that launching the Binder can take quite a while as the install requirements are quite extensive.
 
 .. _Binder: https://mybinder.org/v2/gh/rochefort-lab/fissa/master?filepath=examples
 
