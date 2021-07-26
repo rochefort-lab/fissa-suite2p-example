@@ -1,42 +1,37 @@
+|Binder|
+
 FISSA Suite2p Example
 =====================
+
 In the notebook we provide an example workflow to combine the `FISSA <fissa_>`_ and `Suite2p <suite2p_>`_ methods.
 
 This repository mainly functions to provide environment files to run this notebook on Binder.
-For the most up-to-date code and extensive documention see the original `FISSA <fissa_>`_ repository.
+For the most up-to-date code and extensive documentation on FISSA, see the `FISSA <fissa_>`_ repository.
 
-You can `view <suitehtml_>`_ the notebook or directly interact with it on `Binder <suitebind_>`_. The notebook can also be separately `downloaded <suitedown_>`_.
-
-Note that launching the Binder can take quite a while as the install requirements are quite extensive.
-
+You can `view <suitehtml_>`_ the notebook on GitHub, `download <suitedown_>`_ it to your local machine, or interact with it in your web browser on `Binder <suitebind_>`_.
+Note that launching a Binder session can take 10 minutes.
 
 .. _fissa: https://github.com/rochefort-lab/fissa
-
 .. _suite2p: https://suite2p.readthedocs.io/
-.. _suitebind: https://mybinder.org/v2/gh/rochefort-lab/fissa-suite2p-example/master?filepath=.%2FSuite2p%20example.ipynb
-.. _suitehtml: https://rochefort-lab.github.io/fissa/examples/Suite2p%20example.html
-.. _suiteview: https://github.com/rochefort-lab/fissa/blob/master/examples/Suite2p%20example.ipynb
-.. _suitedown: https://raw.githubusercontent.com/rochefort-lab/fissa/master/examples/Suite2p%20example.ipynb
+.. _suitebind: https://mybinder.org/v2/gh/rochefort-lab/fissa-suite2p-example/master?filepath=Suite2p%20example.ipynb
+.. _suitehtml: https://rochefort-lab.github.io/fissa-suite2p-example/Suite2p%20example.html
+.. _suiteview: https://github.com/rochefort-lab/fissa-suite2p-example/blob/master/Suite2p%20example.ipynb
+.. _suitedown: https://raw.githubusercontent.com/rochefort-lab/fissa-suite2p-example/master/Suite2p%20example.ipynb
 
 This notebook can also be run on your own machine.
 To do so, you will need to:
 
-0.  If you want to run the Suite2p notebook, you'll have to install everything
-    into a conda environment, as per their `installation instructions <install_suite2p_>`_.
-    Note that this notebook was tested with Suite2p version 0.10.0
+1.  Download `a copy of this repository <download_repo_>`_, unzip it, and cd into the ``fissa-suite2p-example`` directory.
 
-1.  Install fissa with its plotting dependencies ``pip install fissa[plotting]``.
+2.  Create a new conda environment with ``conda env create --file .binder/environment.yml``.
 
-2.  Download `a copy of the repository <download_repo_>`_, unzip it and browse
-    to the examples_ directory.
+3.  Activate the environment with ``conda activate suite2p-fissa``.
 
-3.  Start up a Jupyter notebook server to run our notebooks ``jupyter notebook``.
+4.  Start up a Jupyter notebook server to run our notebooks ``jupyter notebook``.
 
 If you're new to Jupyter notebooks, here is `an approachable tutorial`_.
 
-.. _install_suite2p: https://mouseland.github.io/suite2p/_build/html/installation.html
-.. _download_repo: https://github.com/rochefort-lab/fissa/archive/master.zip
-.. _examples: https://github.com/rochefort-lab/fissa/tree/master/examples
+.. _download_repo: https://github.com/rochefort-lab/fissa-suite2p-example/archive/master.zip
 .. _an approachable tutorial: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
 
 
@@ -59,3 +54,8 @@ Public License for more details.
 
 You should have received a copy of the GNU General Public License along
 with this program. If not, see http://www.gnu.org/licenses/.
+
+
+.. |Binder| image:: https://mybinder.org/badge_logo.svg
+   :target: suitebind_
+   :alt: Open in Binder
