@@ -1,3 +1,5 @@
+|Binder|
+
 FISSA Suite2p Example
 =====================
 
@@ -52,3 +54,8 @@ Public License for more details.
 
 You should have received a copy of the GNU General Public License along
 with this program. If not, see http://www.gnu.org/licenses/.
+
+
+.. |Binder| image:: https://mybinder.org/badge_logo.svg
+   :target: suitebind_
+   :alt: Open in Binder
