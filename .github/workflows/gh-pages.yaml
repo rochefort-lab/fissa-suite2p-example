@@ -1,0 +1,90 @@
+# GitHub pages workflow
+#
+# Deploys notebook to github pages.
+
+name: gh-pages
+
+on:
+  push:
+    branches: [main, master]
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+jobs:
+  notebooks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Determine default branch
+      run: |
+        DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
+        echo "default_branch=$DEFAULT_BRANCH" >> $GITHUB_ENV
+        echo "default_branch_ref=refs/heads/$DEFAULT_BRANCH" >> $GITHUB_ENV
+
+    - name: Install apt dependencies
+      run: xargs -a .binder/apt.txt sudo apt-get install
+
+    - name: Cache conda
+      uses: actions/cache@v2
+      with:
+        path: ~/conda_pkgs_dir
+        key: ${{ runner.os }}_conda_${{ hashFiles('.binder/environment.yml') }}
+
+    - name: Set up conda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+        environment-file: ".binder/environment.yml"
+        python-version: 3.7
+
+    - name: System information
+      run: python .github/workflows/system_info.py
+
+    - name: Debug environment
+      run: |
+        echo "which conda:"
+        which conda
+        echo "conda info:"
+        conda info -a  || echo "No conda"
+        echo "conda env export:"
+        conda env export | cat || echo "No conda"
+        echo "which python:"
+        which python
+        echo "python version:"
+        python --version
+        echo "pip freeze:"
+        python -m pip freeze
+
+    - name: Build notebooks
+      run: |
+        file="Suite2p example.ipynb";
+        echo "Processing $file";
+        jupyter nbconvert --execute --to notebook --inplace "$file" \
+            && jupyter nbconvert --to html "$file" \
+            || echo "Error executing $file notebook";
+        if [ ! -f "${file%.*}.html" ]; then
+            jupyter nbconvert --to html "$file" \
+                || echo "Error converting $file to HTML";
+        fi;
+
+    - name: Add index.html redirect
+      run: |
+        NEW_URL="https://rochefort-lab.github.io/fissa-suite2p-example/Suite2p%20example.html";
+        FILE="index.html";
+        echo "<!DOCTYPE HTML>" > $FILE;
+        echo "<html lang='en'><head><meta charset='utf-8'>" >> $FILE;
+        echo "<meta http-equiv='refresh' content='0;url=${NEW_URL}' />" >> $FILE;
+        echo "<link rel='canonical' href='${NEW_URL}' />" >> $FILE;
+        echo "</head>" >> $FILE;
+        echo "<body><p>The page been moved to <a href='${NEW_URL}'>${NEW_URL}</a></p></body>" >> $FILE;
+        echo "</html>" >> $FILE;
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == env.default_branch_ref
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
