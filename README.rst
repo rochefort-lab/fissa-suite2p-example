@@ -19,22 +19,17 @@ Note that launching a Binder session can take 10 minutes.
 This notebook can also be run on your own machine.
 To do so, you will need to:
 
-0.  If you want to run the Suite2p notebook, you'll have to install everything
-    into a conda environment, as per their `installation instructions <install_suite2p_>`_.
-    Note that this notebook was tested with Suite2p version 0.10.0
+1.  Download `a copy of this repository <download_repo_>`_, unzip it, and cd into the ``fissa-suite2p-example`` directory.
 
-1.  Install fissa with its plotting dependencies ``pip install fissa[plotting]``.
+2.  Create a new conda environment with ``conda env create --file .binder/environment.yml``.
 
-2.  Download `a copy of the repository <download_repo_>`_, unzip it and browse
-    to the examples_ directory.
+3.  Activate the environment with ``conda activate suite2p-fissa``.
 
-3.  Start up a Jupyter notebook server to run our notebooks ``jupyter notebook``.
+4.  Start up a Jupyter notebook server to run our notebooks ``jupyter notebook``.
 
 If you're new to Jupyter notebooks, here is `an approachable tutorial`_.
 
-.. _install_suite2p: https://mouseland.github.io/suite2p/_build/html/installation.html
-.. _download_repo: https://github.com/rochefort-lab/fissa/archive/master.zip
-.. _examples: https://github.com/rochefort-lab/fissa/tree/master/examples
+.. _download_repo: https://github.com/rochefort-lab/fissa-suite2p-example/archive/master.zip
 .. _an approachable tutorial: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
 
 
