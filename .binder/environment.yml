@@ -14,7 +14,7 @@ dependencies:
   - six=1.16.0=pyh6c4a22f_0
   - tbb=2021.3.0=h4bd325d_0
   - pip:
-    - fissa[plotting]
+    - git+https://github.com/rochefort-lab/fissa.git#egg=fissa[plotting]
     - future==0.18.2
     - imagecodecs==2020.2.18
     - imageio==2.8.0
