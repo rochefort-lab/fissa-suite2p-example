@@ -24,7 +24,7 @@ To do so, you will need to:
 0.  If you want to run the Suite2p notebook, you'll have to install everything
     into a conda environment, as per their `installation instructions <install_suite2p_>`_.
     Note that this notebook was tested with Suite2p version 0.10.0
-    
+
 1.  Install fissa with its plotting dependencies ``pip install fissa[plotting]``.
 
 2.  Download `a copy of the repository <download_repo_>`_, unzip it and browse
