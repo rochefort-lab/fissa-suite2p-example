@@ -13,10 +13,10 @@ Note that launching a Binder session can take 10 minutes.
 
 .. _fissa: https://github.com/rochefort-lab/fissa
 .. _suite2p: https://suite2p.readthedocs.io/
-.. _suitebind: https://mybinder.org/v2/gh/rochefort-lab/fissa-suite2p-example/master?filepath=Suite2p%20example.ipynb
+.. _suitebind: https://mybinder.org/v2/gh/rochefort-lab/fissa-suite2p-example/v1.0.x?filepath=Suite2p%20example.ipynb
 .. _suitehtml: https://rochefort-lab.github.io/fissa-suite2p-example/Suite2p%20example.html
-.. _suiteview: https://github.com/rochefort-lab/fissa-suite2p-example/blob/master/Suite2p%20example.ipynb
-.. _suitedown: https://raw.githubusercontent.com/rochefort-lab/fissa-suite2p-example/master/Suite2p%20example.ipynb
+.. _suiteview: https://github.com/rochefort-lab/fissa-suite2p-example/blob/v1.0.x/Suite2p%20example.ipynb
+.. _suitedown: https://raw.githubusercontent.com/rochefort-lab/fissa-suite2p-example/v1.0.x/Suite2p%20example.ipynb
 
 This notebook can also be run on your own machine.
 To do so, you will need to:
@@ -31,7 +31,7 @@ To do so, you will need to:
 
 If you're new to Jupyter notebooks, here is `an approachable tutorial`_.
 
-.. _download_repo: https://github.com/rochefort-lab/fissa-suite2p-example/archive/master.zip
+.. _download_repo: https://github.com/rochefort-lab/fissa-suite2p-example/archive/v1.0.x.zip
 .. _an approachable tutorial: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
 
 
