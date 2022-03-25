@@ -14,7 +14,6 @@ Note that launching a Binder session can take 10 minutes.
 .. _fissa: https://github.com/rochefort-lab/fissa
 .. _suite2p: https://suite2p.readthedocs.io/
 .. _suitebind: https://mybinder.org/v2/gh/rochefort-lab/fissa-suite2p-example/master?filepath=Suite2p%20example.ipynb
-.. _suitehtml: https://rochefort-lab.github.io/fissa-suite2p-example/Suite2p%20example.html
 .. _suiteview: https://github.com/rochefort-lab/fissa-suite2p-example/blob/master/Suite2p%20example.ipynb
 .. _suitedown: https://raw.githubusercontent.com/rochefort-lab/fissa-suite2p-example/master/Suite2p%20example.ipynb
 
